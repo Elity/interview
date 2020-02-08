@@ -19,5 +19,8 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    // 生产环境不允许出现 console 和 debugger
+    'no-console': process.env.NODE_ENV === 'production' ? 2 : 1,
+    'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 1,
   }
 }
